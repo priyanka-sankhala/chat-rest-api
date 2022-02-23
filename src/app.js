@@ -20,7 +20,6 @@ const logger = require('./utils/logger');
 const app = express();
 
 if (config.env !== 'test') {
-  console.log('here in morgen');
   app.use(morgan.successHandler);
   app.use(morgan.errorHandler);
 }

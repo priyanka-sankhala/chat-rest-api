@@ -32,7 +32,7 @@ const logout = catchAsync(async (req, res) => {
 
 const refreshTokens = catchAsync(async (req, res) => {
   const tokens = await authService.refreshAuth(req.body.refreshToken);
-  res.send({ ...tokens,  });
+  res.send(tokens);
 });
 
 const forgotPassword = catchAsync(async (req, res) => {

@@ -49,7 +49,7 @@ const get = async (filter, options) => {
  * @returns {Promise<User>}
  */
 const getUserById = async (id) => {
-  return User.findById(id);
+  return User.findById(id).select({first_name:1,last_name:1,email:1,user_name:1});
 };
 
 /**
